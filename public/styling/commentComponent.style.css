@@ -1,0 +1,49 @@
+/* how to sort the content in between the selectors: alphabetical order */
+
+#comment-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    background-color: #1c404c;
+}
+
+#comment-section input {
+    border-bottom: none;
+    margin: 0px 0px 20px;
+    padding: 10px 0px 10px;
+    padding-left: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.button-no-4 {
+    background-color: #1c404c;
+    color: #e3e4e8;
+    border: #e3e4e8 2px solid;
+    border-radius: 50px;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 5px 0px 50px;
+    padding: 9px 20px;
+    text-align: center;
+    width: max-content;
+}
+
+.comments {
+    background-color: #1c404c;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.comments p {
+    margin-bottom: 0;
+}
+
+.each-comment {
+    padding-bottom: 20px;
+}

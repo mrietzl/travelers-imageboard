@@ -1,0 +1,324 @@
+/* how to sort the content in between the selectors: alphabetical order */
+
+/* Einbettungscode für die Schriftart Aktiv Grotesk von Typekit
+(not really sure if I need this here?)
+@import url("https://use.typekit.net/oye2svd.css"); */
+
+/* CSS rules to specify families from the font "eczar":
+font-family: 'Eczar', serif;
+Regular 400 / Medium 500 / Semi-bold 600 / Bold 700 / Extra-bold 800 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#app {
+    background: url("/images/imageboard-background.svg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    /* Full height */
+    height: 100%;
+}
+
+#app {
+    align-items: center;
+    align-items: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #1c404c;
+    font-family: "Eczar";
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 50px;
+    max-width: 600px;
+    text-align: center;
+}
+
+h2 {
+    color: #1c404c;
+    font-family: "Eczar";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    max-width: 600px;
+    padding: 25px;
+    text-align: center;
+}
+
+p {
+    color: #1c404c;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.introduction {
+    margin: 0px;
+    max-width: 600px;
+    padding-bottom: 50px;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+input {
+    background-color: #e3e4e8;
+    border: none;
+    border-bottom: 2px solid #1c404c;
+    color: #1c404c;
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+::placeholder {
+    color: #8e8e8e;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* 
+input[type="file"] {
+    margin: 10px auto;
+} */
+
+/* here I would still like to style the input "file":
+
+.file {
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    width: 0.1px;
+}
+
+.file-input label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+input:hover + label,
+input:focus + label {
+    transform: scale(1.02);
+}
+
+input:focus + label {
+    outline: 1px solid #000;
+    outline: -webkit-focus-ring-color auto 2px;
+}
+
+.file-name {
+    position: absolute;
+    bottom: -35px;
+    left: 10px;
+    font-size: 0.85rem;
+    color: #555;
+} */
+
+.mandatory {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+}
+
+.button-no-1 {
+    align-items: center;
+    background-color: #1c404c;
+    border: #1c404c 2px solid;
+    border-radius: 50px;
+    color: #e3e4e8;
+    display: flex;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 15px 0px 25px;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+.button-no-2 {
+    background-color: #e3e4e8;
+    border: #1c404c 2px solid;
+    border-radius: 50px;
+    color: #1c404c;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0px 0px 50px;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+button:hover {
+    padding: 9px 40px;
+    transition: width 0.2s ease-out;
+}
+
+.error-upload {
+    color: #86181b;
+    font-style: italic;
+    margin: 0px 0px 25px;
+}
+
+.success-upload {
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px 0px 25px;
+}
+
+#imageboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    width: 100%;
+}
+
+#imageboard section {
+    width: 25%;
+}
+
+.tile {
+    align-items: center;
+    background-color: #d7d7d9;
+    border: 2px solid #1c404c;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 0;
+}
+
+.img {
+    filter: grayscale(100%);
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img:hover {
+    cursor: url("/images/imageboard_curser-hover.svg"), auto;
+    filter: contrast(100%);
+}
+
+.image-text {
+    background-color: #d7d7d9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.image-text p {
+    background-color: #d7d7d9;
+    text-align: left;
+}
+
+.a {
+    font-weight: 700;
+    margin: 20px 20px 20px;
+}
+
+.b {
+    margin: 0px 20px 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.c {
+    color: #8e8e8e;
+    font-style: italic;
+    margin: 0px 20px 20px;
+}
+
+footer {
+    align-items: center;
+    background-color: #1c404c;
+    color: #e3e4e8;
+    display: flex;
+    font-display: auto;
+    font-family: "aktiv-grotesk";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+a {
+    background-color: #1c404c;
+    color: #e3e4e8;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.right,
+.left {
+    align-items: center;
+    background-color: #1c404c;
+    color: #e3e4e8;
+    display: flex;
+}
+
+.icon-heart {
+    background-color: #1c404c;
+    margin: 0 10px;
+}
+
+.blurry {
+    filter: blur(2px);
+}
+
+.icon-arrow-topright {
+    background-color: #1c404c;
+    margin-left: 10px;
+}
+
+.icon-heart {
+    background-color: #1c404c;
+    margin: 0px 10px 0px;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>travel image board</title>
+
+    <!-- this is the embeded font "aktiv-grotesk" from typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/oye2svd.css">
+
+    <!-- this is the embeded font "eczar" from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- favicon as svg -->
+    <link
+    rel="icon"
+    type="image/svg"
+    href="/images/imageboard_favicon.svg"
+    />
+
+    <!-- favicon fallback as ong -->
+    <link
+    rel="icon"
+    type="image/png"
+    href="/images/imageboard_favicon.png"
+    />
+
+    <!-- styling … extracted into different files for a better overview -->
+    <link rel="stylesheet" href="/styling/index.style.css">
+    <link rel="stylesheet" href="/styling/modalComponent.style.css">
+    <link rel="stylesheet" href="/styling/commentComponent.style.css">
+</head>
+
+<body>
+
+    <div id="root" >
+        <div id="app" :class="{ blurry: selectedImageId }">
+            <h1>Life is a journey</h1>
+
+            <h2>Let’s make this journey together!</h2>
+
+            <p class="introduction">Welcome to this image board which shows all of the travel experiences of our community. Feel free to watch the pictures, read the comments or even add an own moment you have captured in a pictures.</p>
+
+            <form method="POST" @submit.prevent="handleSubmit">
+                <input v-model="input.title" type="text" name="title" placeholder="title *"/>
+                <input v-model="input.description" type="text" name="description" placeholder="description"/>
+                <input v-model="input.username" type="text" name="username" placeholder="username *"/>
+
+                <!-- here I would still like to style the input "file":
+                <div class="file-input">
+                    <input type="file" accept="image/*" @change="handleChange" id="file" class="file">
+                    <label for="file">select file
+                        <p class="file-name"></p>
+                    </label>
+                </div> -->
+
+                <input type="file" accept="image/*" @change="handleChange" />
+
+                <p class="mandatory">* mandatory fields</p>
+                <button class="button-no-1" type="submit">upload my experience</button>
+
+                <!-- error handeling --> 
+                <p v-if="error" class="error-upload">Oh no, something went wrong. Please try it again.</p>
+                <p v-if="success" class="success-upload">Thank you for sharing your unique travel experience with us!</p>
+        
+            </form>
+
+            <div id="imageboard">
+                <section v-for="image in images" class="tile" @click="handleClick(image.id)">
+                    <!-- the ':' before the 'src' catches the content inside the double quotes -->
+                    <img class="img" :src="image.url" alt="image" >
+                    <div class="image-text">
+                        <p class="a">{{image.title}}</p>
+                        <p class="b">{{image.description}}</p>
+                        <p class="c">from {{image.username}}</p>
+                    </div>
+                </section>
+            </div>
+
+            <button class="button-no-2" v-if="hasMore" type="button" @click="loadMore">more images</button>
+
+            <footer>
+                <div class="left">© {{new Date().getFullYear()}} | made by Michèle Rietzl with <img class="icon-heart" src="/images/imageboard_icons_icon-heart.svg" alt="icon-heart"> for design.</div>
+                <div class="right">
+                    <a class="underlined" href="https://design-bootcamp.herokuapp.com/about" target="_blank">wanna check out another project?<img class="icon-arrow-topright" src="/images/imageboard_icon-arrow-lightblue-topright.svg" alt="icon-arrow-topright"></a>
+                </div>
+            </footer>
+
+        </div>
+
+        <modal-component class="modal" @close="handleClose" :id="selectedImageId" v-if="selectedImageId"></modal-component>
+
+    </div>
+
+    <script src="/js/app.js" type="module" crossorigin="use-credentials"></script>
+</body>
+</html>
