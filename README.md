@@ -74,10 +74,11 @@ High Level Description:
 This project is an image board where users can upload and describe own travel images or view and comment on pictures other people have added to the board.
 
 Website:
-…
+https://travelers-imageboard.herokuapp.com/
 
 Tags:
 - aws
+- aws-s3
 - community
 - components
 - design
@@ -88,9 +89,10 @@ Tags:
 - imageboard
 - file-upload
 - travel
+- travelling
 - pagination
-- postregresql
-- s3
+- postresql
+- s3-bucket
 - spicedacademy
 - vue-js
 
