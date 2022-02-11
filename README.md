@@ -2,7 +2,8 @@
 
 This project is an image board for a travel community where users can add their own experiences captures by a picture. They can upload it, set their username, a title and a describtion to the image. They can also view or even comment on other pictures.
 
-Check out the 👉 [image board for travelers](https://travelers-imageboard.herokuapp.com/)
+<!-- enabled the link on heroku because of aws issues (picture uploads)
+Check out the 👉 [image board for travelers](https://travelers-imageboard.herokuapp.com/) -->
 
 The project was made at the [SPICED Academy](https://www.spiced-academy.com/de) within my Full Stack Web Development Bootcamp (Nov. '21 to Feb. '22)
 
