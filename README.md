@@ -17,9 +17,8 @@ The project was made at the [SPICED Academy](https://www.spiced-academy.com/de) 
 -   error handeling for mandatory fields
 -   feedback message shown for succefully uploaded images
 -   view a board of all the images users have added to the board
--   open a overlay component which shows the full picture, title, description, username and date of uploading
+-   open and close an overlay component which shows the full picture, title, description, username and date of uploading
 -   comment on uploaded pictures
--   close the overlay component
 -   routing for revisiting image urls (browser history API)
 -   individual favicon, icons and background graphics
 -   hover effects and filters
