@@ -20,7 +20,7 @@ The project was made at the [SPICED Academy](https://www.spiced-academy.com/de) 
 -   open and close an overlay component which shows the full picture, title, description, username and date of uploading
 -   comment on uploaded pictures
 -   routing for revisiting image urls (browser history API)
--   individual favicon, icons and background graphics
+-   individual branding with infographics, icons, favicon and color scheme
 -   hover effects and filters
 -   scrolling of components
 -   loading more pictures from the data base (pagination)
