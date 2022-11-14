@@ -35,10 +35,10 @@ The project was made at the [SPICED Academy](https://www.spiced-academy.com/de) 
 <a href="https://tc39.es/ecma262/" > <img src="./assets/web-development-js.png" height="75px" /></a>
 <a href="https://nodejs.org/en/" > <img src="./assets/web-development-node-js.png" height="75px" /></a>
 <a href="https://developer.mozilla.org/de/docs/Web/CSS" > <img src="./assets/web-development-css-3.png" height="75px" /></a>
-<a href="https://developer.mozilla.org/de/docs/Web/CSS" > <img src="./assets/web-development-html-5.png" height="75px" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" > <img src="./assets/web-development-html-5.png" height="75px" /></a>
 <a href="https://www.postgresql.org/" > <img src="./assets/web-development-PostgreSQL.png" height="75px" /></a>
-<a href="https://www.postgresql.org/" > <img src="./assets/web-development-vue-js.png" height="75px" /></a>
-<a href="https://www.postgresql.org/" > <img src="./assets/web-development-aws.png" height="75px" /></a>
+<a href="https://vuejs.org/" > <img src="./assets/web-development-vue-js.png" height="75px" /></a>
+<a href="https://aws.amazon.com/de/" > <img src="./assets/web-development-aws.png" height="75px" /></a>
 <a href="https://www.heroku.com/" > <img src="./assets/web-development-heroku.png" height="75px" /></a>
 
 ---
